@@ -1,0 +1,32 @@
+{
+  "github": "SeergiCureero",
+  "projects": [
+    {
+      "name": "Àgora",
+      "url": "https://agora-net.eu",
+      "tags": ["open source", "social network", "privacy"],
+      "d": {
+        "ca": "Xarxa social europea de codi obert centrada en sobirania digital, privacitat i lluita contra la desinformació.",
+        "es": "Red social europea de código abierto centrada en soberanía digital, privacidad y lucha contra la desinformación.",
+        "en": "Open-source European social network focused on digital sovereignty, privacy and fighting disinformation."
+      }
+    },
+    {
+      "name": "JocMot",
+      "url": null,
+      "tags": ["game"],
+      "d": {
+        "ca": "Descripció breu del joc.",
+        "es": "Descripción breve del juego.",
+        "en": "Short description of the game."
+      }
+    }
+  ],
+  "languages": [
+    { "name": "Català", "level": "native" },
+    { "name": "Castellano", "level": "native" },
+    { "name": "English" },
+    { "name": "Italiano" },
+    { "name": "Deutsch", "level": "basic" }
+  ]
+}
