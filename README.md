@@ -24,11 +24,12 @@ data/content.json   projectes, usuari de GitHub i idiomes  <-- edita aquí
 Edita `data/content.json`. Cada projecte:
 
 ```json
-{ "name": "Nom", "url": "https://github.com/SeergiCureero/repo", "tags": ["x"],
+{ "name": "Nom", "tags": ["x"],
+  "links": [ { "label": "Web", "url": "https://..." }, { "label": "Repo", "url": "https://github.com/..." } ],
   "d": { "ca": "...", "es": "...", "en": "..." } }
 ```
 
-Si `url` és `null`, la targeta es mostra sense enllaç.
+Pots posar tants `links` com vulguis (o cap).
 Els textos generals (títols, "Impressió 3D", "Arduino"...) són a `assets/app.js`.
 
 ## Provar en local

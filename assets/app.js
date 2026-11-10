@@ -35,14 +35,12 @@
     $$(".lang button").forEach((b) => b.setAttribute("aria-pressed", b.dataset.l === lang));
 
     const gh = "https://github.com/" + data.github;
-    const cards = data.projects.map((p) => {
-      const inner = `<h3>${esc(p.name)}${p.url ? "<span>↗</span>" : ""}</h3>
+    const cards = data.projects.map((p) => `<div class="card">
+        <h3>${esc(p.name)}</h3>
         <p>${esc((p.d && (p.d[lang] || p.d.en)) || "")}</p>
-        <div class="tags">${(p.tags || []).map((t) => `<span class="tag">${esc(t)}</span>`).join("")}</div>`;
-      return p.url
-        ? `<a class="card" href="${esc(p.url)}" target="_blank" rel="noopener">${inner}</a>`
-        : `<div class="card">${inner}</div>`;
-    });
+        <div class="tags">${(p.tags || []).map((t) => `<span class="tag">${esc(t)}</span>`).join("")}</div>
+        <div class="links">${(p.links || []).map((l) => `<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)} ↗</a>`).join("")}</div>
+      </div>`);
     cards.push(`<a class="card" href="${esc(gh)}" target="_blank" rel="noopener">
       <h3>GitHub<span>↗</span></h3><p>github.com/${esc(data.github)}</p>
       <div class="tags"><span class="tag">${esc(T[lang].more)}</span></div></a>`);
